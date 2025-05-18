@@ -1,0 +1,30 @@
+{
+    "manifest_version": 3,
+    "name": "React Component Finder",
+    "version": "1.0",
+    "description": "Click on React components in localhost and open them in VS Code",
+    "icons": {
+        "128": "icon.png"
+    },
+    "permissions": ["activeTab", "scripting"],
+    "host_permissions": ["http://localhost:*/*", "http://127.0.0.1:*/*"],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["http://localhost:*/*", "http://127.0.0.1:*/*"],
+            "js": ["content-script.js"],
+            "css": ["styles.css"]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": ["inject-script.js"],
+            "matches": ["http://localhost:*/*", "http://127.0.0.1:*/*"]
+        }
+    ],
+    "action": {
+        "default_title": "React Component Finder"
+    }
+}

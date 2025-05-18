@@ -1,0 +1,55 @@
+#react-finder-overlay {
+    position: absolute;
+    pointer-events: none;
+    border: 2px solid #61dafb; /* React blue */
+    background-color: rgba(97, 218, 251, 0.1);
+    z-index: 999999;
+    box-shadow: 0 0 10px rgba(97, 218, 251, 0.5);
+    border-radius: 3px;
+    transition: all 0.2s ease;
+}
+
+#react-finder-info {
+    position: absolute;
+    background-color: #282c34;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 12px;
+    z-index: 10000000;
+    max-width: 300px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid #61dafb;
+}
+
+#react-finder-info .component-name {
+    font-weight: bold;
+    color: #61dafb;
+    margin-bottom: 4px;
+}
+
+#react-finder-info .component-props {
+    max-height: 100px;
+    overflow: auto;
+    font-size: 11px;
+    color: #abb2bf;
+    word-break: break-all;
+}
+
+#react-finder-notification {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #282c34;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px;
+    z-index: 10000001;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid #61dafb;
+    transition: opacity 0.5s ease;
+}
